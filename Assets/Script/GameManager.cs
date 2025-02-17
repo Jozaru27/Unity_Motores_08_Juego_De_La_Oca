@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         // RELLENAMOS EL VECTOR DE GAMEOBJECTS
         //vectorObjetos = GameObject.FindGameObjectsWithTag("casilla");
 
-        // METODO 1: OBTENER LOS HIJOS DE UN PARENT VACÍO
+        // METODO 1: OBTENER LOS HIJOS DE UN PARENT VACï¿½O
 
         // METODO 2: RELLENAR CON UN FOR Y UN FIND
         vectorObjetos = new GameObject[21];
@@ -74,6 +74,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            int tirada = TirarDado();
+            Debug.Log("El jugador ha sacado un " + tirada);
+        }
     }
+
+    public int TirarDado()
+    {
+        int resultado = Random.Range(1, 7); // Genera un nÃºmero aleatorio entre 1 y 6 (incluidos)
+        Debug.Log("Tirada del dado: " + resultado);
+        return resultado;
+    }
+
 }
