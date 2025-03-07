@@ -249,7 +249,7 @@ public class GameManager : MonoBehaviour
                     switch (infoCasillas[i])
                     {
                         case 1:
-                            renderer.material.color = colorTeletransporte;  // Teletransporte
+                            renderer.material.color = colorTeletransporte;  // Teletransporte // LA DE DESTINO EN AZUL TAMBIÉN
                             break;
                         case 2:
                             renderer.material.color = colorVolverATirar;  // Volver a tirar
